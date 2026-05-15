@@ -94,3 +94,32 @@ contactForm.addEventListener("submit", async function (e) {
     submitButton.textContent = originalText;
   }
 });
+
+function sendEmail(event) {
+    event.preventDefault();
+
+    const button = document.querySelector(".contact-form button");
+    const originalText = button.innerText;
+
+    button.innerText = "Sending...";
+    button.disabled = true;
+
+    emailjs.sendForm(
+        "YOUR_SERVICE_ID",
+        "YOUR_TEMPLATE_ID",
+        event.target,
+        "YOUR_PUBLIC_KEY"
+    )
+    .then(() => {
+        alert("Message sent successfully!");
+        event.target.reset();
+    })
+    .catch((error) => {
+        console.error("EmailJS Error:", error);
+        alert("Failed to send message. Please try again.");
+    })
+    .finally(() => {
+        button.innerText = originalText;
+        button.disabled = false;
+    });
+}
