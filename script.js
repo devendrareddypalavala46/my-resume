@@ -14,7 +14,24 @@ toggle.addEventListener("click", () => {
   }
 });
 
+// Contact Form - Open user's email client
 document.querySelector(".contact-form").addEventListener("submit", function (e) {
   e.preventDefault();
-  alert("Thank you! Please contact me directly at devendrareddypalavala46@gmail.com.");
+
+  const name = document.querySelector('input[type="text"]').value;
+  const email = document.querySelector('input[type="email"]').value;
+  const message = document.querySelector("textarea").value;
+
+  const subject = encodeURIComponent("Portfolio Contact from " + name);
+  const body = encodeURIComponent(
+    "Name: " + name + "\n" +
+    "Email: " + email + "\n\n" +
+    message
+  );
+
+  window.location.href =
+    "mailto:devendrareddypalavala46@gmail.com?subject=" +
+    subject +
+    "&body=" +
+    body;
 });

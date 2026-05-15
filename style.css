@@ -1,5 +1,12 @@
+/* ==========================================
+   Global Styles
+========================================== */
 * {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -10,59 +17,23 @@ body {
   color: #222;
 }
 
+/* Dark Mode */
 body.dark {
   background: #0f172a;
   color: #f8fafc;
 }
 
+/* ==========================================
+   Layout
+========================================== */
 .container {
   width: min(1100px, calc(100% - 40px));
   margin: 0 auto;
 }
 
-.hero {
-  background: linear-gradient(135deg, #0f172a, #2563eb);
-  color: white;
-  text-align: center;
-  padding: 80px 0;
-}
-
-.profile-pic {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 5px solid white;
-  margin-bottom: 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-}
-
-h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
-
-.subtitle {
-  font-size: 1.25rem;
-  margin-bottom: 25px;
-}
-
-.buttons a {
-  display: inline-block;
-  margin: 8px;
-  padding: 12px 20px;
-  background: white;
-  color: #2563eb;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.buttons a:hover {
-  transform: translateY(-2px);
-}
-
+/* ==========================================
+   Dark Mode Toggle Button
+========================================== */
 .theme-toggle {
   position: fixed;
   top: 20px;
@@ -75,8 +46,70 @@ h1 {
   background: #ffffff;
   color: #2563eb;
   font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
+/* ==========================================
+   Hero Section
+========================================== */
+.hero {
+  background: linear-gradient(135deg, #0f172a, #2563eb);
+  color: white;
+  text-align: center;
+  padding: 80px 0;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 5px solid white;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0 0 10px;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 25px;
+  opacity: 0.95;
+}
+
+/* ==========================================
+   Buttons
+========================================== */
+.buttons a {
+  display: inline-block;
+  margin: 8px;
+  padding: 12px 20px;
+  background: white;
+  color: #2563eb;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.buttons a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* ==========================================
+   Sections
+========================================== */
 section {
   margin: 60px 0;
 }
@@ -85,8 +118,12 @@ h2 {
   border-bottom: 3px solid #2563eb;
   display: inline-block;
   padding-bottom: 6px;
+  margin-bottom: 20px;
 }
 
+/* ==========================================
+   Skills Tags
+========================================== */
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -102,18 +139,48 @@ h2 {
   font-weight: 600;
 }
 
+/* ==========================================
+   Cards (Experience, Projects, Certifications, Contact)
+========================================== */
 .card {
-  background: white;
+  background: #ffffff;
   padding: 25px;
   border-radius: 14px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
   margin-top: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-body.dark .card {
-  background: #1e293b;
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.12);
 }
 
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #1e3a8a;
+  font-size: 1.35rem;
+}
+
+.card p {
+  margin: 8px 0;
+  line-height: 1.7;
+  color: #374151;
+}
+
+.card ul {
+  padding-left: 20px;
+  margin: 10px 0 0;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+/* ==========================================
+   Contact Form
+========================================== */
 .contact-form {
   display: grid;
   gap: 15px;
@@ -122,10 +189,16 @@ body.dark .card {
 
 .contact-form input,
 .contact-form textarea {
+  width: 100%;
   padding: 12px;
-  border: 1px solid #ccc;
+  border: 1px solid #cbd5e1;
   border-radius: 8px;
   font-size: 14px;
+  font-family: inherit;
+}
+
+.contact-form textarea {
+  resize: vertical;
 }
 
 .contact-form button {
@@ -135,8 +208,18 @@ body.dark .card {
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background 0.3s ease;
 }
 
+.contact-form button:hover {
+  background: #1d4ed8;
+}
+
+/* ==========================================
+   Footer
+========================================== */
 footer {
   text-align: center;
   padding: 30px;
@@ -145,9 +228,62 @@ footer {
   margin-top: 60px;
 }
 
+/* ==========================================
+   Dark Mode Styles
+========================================== */
+body.dark .theme-toggle {
+  background: #1e293b;
+  color: #93c5fd;
+}
+
+body.dark .tags span {
+  background: #1e3a8a;
+  color: #dbeafe;
+}
+
+body.dark .card {
+  background: #1e293b;
+}
+
+body.dark .card h3 {
+  color: #93c5fd;
+}
+
+body.dark .card p,
+body.dark .card li {
+  color: #cbd5e1;
+}
+
+body.dark .contact-form input,
+body.dark .contact-form textarea {
+  background: #0f172a;
+  color: #f8fafc;
+  border: 1px solid #334155;
+}
+
+body.dark .contact-form input::placeholder,
+body.dark .contact-form textarea::placeholder {
+  color: #94a3b8;
+}
+
+body.dark .contact-form button {
+  background: #3b82f6;
+}
+
+body.dark footer {
+  background: #020617;
+}
+
+/* ==========================================
+   Responsive Design
+========================================== */
 @media (max-width: 768px) {
   h1 {
     font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
   }
 
   .profile-pic {
@@ -159,5 +295,13 @@ footer {
     display: block;
     margin: 10px auto;
     width: fit-content;
+  }
+
+  .container {
+    width: calc(100% - 24px);
+  }
+
+  section {
+    margin: 40px 0;
   }
 }
