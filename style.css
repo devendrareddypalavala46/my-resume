@@ -122,6 +122,79 @@ h2 {
 }
 
 /* ==========================================
+   About Me Card
+========================================== */
+.about-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  margin-top: 20px;
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.08);
+  border: 1px solid #e2e8f0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(37, 99, 235, 0.15);
+}
+
+.about-card p {
+  margin: 0 0 18px;
+  line-height: 1.9;
+  font-size: 1.05rem;
+  color: #374151;
+  text-align: justify;
+}
+
+.about-card p:last-child {
+  margin-bottom: 0;
+}
+
+.about-card strong {
+  color: #1d4ed8;
+  font-weight: 700;
+}
+
+/* ==========================================
+   Dark Mode - About Me Card
+========================================== */
+body.dark .about-card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+body.dark .about-card:hover {
+  box-shadow: 0 18px 40px rgba(59, 130, 246, 0.18);
+}
+
+body.dark .about-card p {
+  color: #cbd5e1;
+}
+
+body.dark .about-card strong {
+  color: #93c5fd;
+}
+
+/* ==========================================
+   Mobile Responsive
+========================================== */
+@media (max-width: 768px) {
+  .about-card {
+    padding: 22px;
+    border-radius: 12px;
+  }
+
+  .about-card p {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+}
+
+
+
+/* ==========================================
    Skills Tags
 ========================================== */
 .tags {
