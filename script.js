@@ -1,20 +1,20 @@
-const toggle = document.getElementById('themeToggle');
+const toggle = document.getElementById("themeToggle");
 
-if (localStorage.getItem('theme') === 'dark') {
-  document.body.classList.add('dark');
+if (localStorage.getItem("theme") === "dark") {
+  document.body.classList.add("dark");
 }
 
-toggle.addEventListener('click', () => {
-  document.body.classList.toggle('dark');
+toggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
 
-  if (document.body.classList.contains('dark')) {
-    localStorage.setItem('theme', 'dark');
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("theme", "dark");
   } else {
-    localStorage.setItem('theme', 'light');
+    localStorage.setItem("theme", "light");
   }
 });
 
-document.querySelector('.contact-form').addEventListener('submit', function(e) {
+document.querySelector(".contact-form").addEventListener("submit", function (e) {
   e.preventDefault();
-  alert('Thank you! Please contact me directly at devendrareddypalavala46@gmail.com.');
+  alert("Thank you! Please contact me directly at devendrareddypalavala46@gmail.com.");
 });

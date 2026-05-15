@@ -1,4 +1,84 @@
 * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f8fafc;
+  color: #222;
+}
+
+body.dark {
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+.container {
+  width: min(1100px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.hero {
+  background: linear-gradient(135deg, #0f172a, #2563eb);
+  color: white;
+  text-align: center;
+  padding: 80px 0;
+}
+
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid white;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 25px;
+}
+
+.buttons a {
+  display: inline-block;
+  margin: 8px;
+  padding: 12px 20px;
+  background: white;
+  color: #2563eb;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.buttons a:hover {
+  transform: translateY(-2px);
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #ffffff;
+  color: #2563eb;
+  font-weight: bold;
+}
+
+section {
+  margin: 60px 0;
 }
 
 h2 {
@@ -26,7 +106,7 @@ h2 {
   background: white;
   padding: 25px;
   border-radius: 14px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
   margin-top: 20px;
 }
 
@@ -45,6 +125,7 @@ body.dark .card {
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 8px;
+  font-size: 14px;
 }
 
 .contact-form button {
@@ -61,6 +142,7 @@ footer {
   padding: 30px;
   background: #0f172a;
   color: white;
+  margin-top: 60px;
 }
 
 @media (max-width: 768px) {
@@ -69,7 +151,13 @@ footer {
   }
 
   .profile-pic {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
+  }
+
+  .buttons a {
+    display: block;
+    margin: 10px auto;
+    width: fit-content;
   }
 }
