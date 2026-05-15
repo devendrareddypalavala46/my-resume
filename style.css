@@ -378,3 +378,46 @@ body.dark footer {
     margin: 40px 0;
   }
 }
+
+/* Hero Content */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-left: 260px;   /* Creates space on the left for the photo */
+}
+
+/* Profile Image - Left Side */
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 5px solid white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+
+  /* Position image on left side */
+  position: absolute;
+  left: 40px;            /* Adjust this value if needed */
+  top: 50%;
+  transform: translateY(-50%);
+
+  margin-bottom: 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hero-content {
+    padding-left: 0;
+  }
+
+  .profile-pic {
+    position: static;
+    transform: none;
+    width: 140px;
+    height: 140px;
+    margin-bottom: 20px;
+  }
+}
