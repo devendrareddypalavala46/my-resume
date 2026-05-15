@@ -421,3 +421,93 @@ body.dark footer {
     margin-bottom: 20px;
   }
 }
+
+
+/* ==========================================
+   Mobile Responsive Fix
+   Add this at the END of your style.css file
+========================================== */
+@media (max-width: 768px) {
+
+  /* Hero Section */
+  .hero {
+    min-height: auto;
+    padding: 60px 20px;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Profile Photo */
+  .profile-pic {
+    width: 140px;
+    height: 140px;
+    margin: 20px auto;
+    display: block;
+    position: static; /* Prevent overlap on mobile */
+  }
+
+  /* Name */
+  .hero h1 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 15px;
+  }
+
+  /* Subtitle */
+  .hero p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    padding: 0 10px;
+    margin-bottom: 25px;
+  }
+
+  /* Buttons */
+  .btn {
+    display: block;
+    width: 220px;
+    margin: 10px auto;
+    padding: 14px 20px;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  /* Social Links Container */
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .social-links a {
+    width: 220px;
+    text-align: center;
+  }
+
+  /* Section Padding */
+  section {
+    padding: 60px 20px;
+  }
+
+  /* About Section */
+  .about-card,
+  .project-card,
+  .skill-category,
+  .contact-form {
+    padding: 25px 20px;
+  }
+
+  /* Container */
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+}
