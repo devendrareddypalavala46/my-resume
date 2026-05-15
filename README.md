@@ -1,6 +1,26 @@
-# Devendra Portfolio Website
+# \# Devendra Portfolio Website
 
-Upload `index.html` and `style.css` to your GitHub repository and GitHub Pages will automatically publish the site.
+# 
 
-Live URL:
-https://devendrareddypalavala46.github.io/my-resume/
+# Professional portfolio website hosted using GitHub Pages.
+
+# 
+
+# \## Live Website
+
+# https://devendrareddypalavala46.github.io/my-resume/
+
+# 
+
+# \## Features
+
+# \- Resume Download Button
+
+# \- Dark Mode Toggle
+
+# \- Certifications Section
+
+# \- Contact Form
+
+# \- Responsive Design
+
