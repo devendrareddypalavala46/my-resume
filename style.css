@@ -408,16 +408,85 @@ body.dark footer {
 }
 
 /* Mobile Responsive */
+/* ==========================================
+   Responsive Design for Mobile Devices
+========================================== */
 @media (max-width: 768px) {
-  .hero-content {
-    padding-left: 0;
+
+  /* Hero Section */
+  .hero {
+    padding: 60px 20px;
+    min-height: auto;
   }
 
+  .hero-content {
+    padding: 0 10px;
+  }
+
+  /* Profile Image */
   .profile-pic {
-    position: static;
-    transform: none;
     width: 140px;
     height: 140px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+  }
+
+  /* Name */
+  .hero h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  /* Subtitle */
+  .hero h2,
+  .tagline {
+    font-size: 1.1rem;
+  }
+
+  /* Description */
+  .hero p {
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 0 10px;
+  }
+
+  /* Buttons */
+  .btn {
+    display: block;
+    width: 100%;
+    max-width: 280px;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  /* Section Titles */
+  .section-title {
+    font-size: 2rem;
+  }
+
+  /* General Sections */
+  section {
+    padding: 60px 20px;
+  }
+
+  /* Skills Grid */
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Projects Grid */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Contact Section */
+  .contact-info {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 20px;
+    font-size: 0.9rem;
   }
 }
